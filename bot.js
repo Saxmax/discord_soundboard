@@ -1,5 +1,6 @@
 console.log("Setting up Din Mamma...");
 
+const auth = require('./auth.json');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
@@ -440,4 +441,4 @@ function weightedRandomThroat() {
 	//}
 };
 
-client.login('NjkwMjYzOTIyMzY4MTg0MzY5.XnO5VA.wzK_qnDdWcJKLt2me89UXhmbkaw');
+client.login(auth.token);
