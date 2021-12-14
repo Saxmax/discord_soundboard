@@ -122,6 +122,7 @@ const specifics = {
 	'have': 'havesomecandy',
 	'hej': 'hejsanmammaåpappa',
 	'hello': 'hello',
+	'help': 'help',
 	'here': 'herewego',
 	'heter': 'heterjagelnour',
 	'hm': 'hm',
@@ -167,6 +168,7 @@ const specifics = {
 	'me': 'thatsme',
 	'mkay': 'mkay',
 	'mkt': 'väldigtmycketpengar',
+	'more': 'morework',
 	'mum': 'mum',
 	'naej': 'naej',
 	'naj': 'najjnajjnajj',
@@ -184,6 +186,7 @@ const specifics = {
 	'notgood': 'younotgood',
 	'nothot': 'mansnothot',
 	'och': 'och',
+	'off': 'offigothen',
 	'oh': 'himark',
 	'oj': 'ojojoj',
 	'ok': 'ok',
@@ -199,12 +202,14 @@ const specifics = {
 	'phony': 'phony',
 	'quick': 'quickmafs',
 	'rain': 'isgonrain',
+	'ready': 'readytowork',
 	'rim': 'goodnightrimjob',
 	'ringer': 'ringerdet',
 	'ris': 'osåliteris',
 	'run': 'corona_run',
 	'röge': 'rökergott',
 	'sa': 'saflickan',
+	'sheeet': 'sheeet',
 	'shopping': 'shopping',
 	'skaur': 'skaurcream',
 	'skriv': 'skrivpoe',
@@ -224,7 +229,7 @@ const specifics = {
 	'trorinte': 'trorfaktisktintedet',
 	'uckers': 'uckers',
 	'vafan': 'vafantrordu',
-	'what': 'whatisgoingon',
+	'what': 'whatisit',
 	'who': 'whosaidthat',
 	'wiggle': 'wiggle',
 	'words': 'wordsmouth',
@@ -327,6 +332,9 @@ client.on('message', async msg => {
 				finalClip += (Math.floor(Math.random() * 3) + 1).toString();
 			}
 			else if(finalClip == 'wow') {
+				finalClip += (Math.floor(Math.random() * 5) + 1).toString();
+			}
+			else if(finalClip == 'sheeet') {
 				finalClip += (Math.floor(Math.random() * 5) + 1).toString();
 			}
 			if (msg.member.voice.channel) {
