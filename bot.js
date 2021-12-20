@@ -130,6 +130,7 @@ const specifics = {
 	'hihi': 'hihihi',
 	'hoe': 'yourmomsahoe',
 	'hrrm': 'throat',
+	'här': 'härkanmanva',
 	'imorron': 'imrgonärdetfredag',
 	'isak': 'isakadams',
 	'ja': 'jadetkanhända',
