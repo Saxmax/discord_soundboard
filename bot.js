@@ -150,6 +150,7 @@ const specifics = {
 	'kul': 'jattekul',
 	'kult': 'hadetsåkult',
 	'kom': 'komhit',
+	'kön': 'könsorgan',
 	'laugh': 'goofylaugh',
 	'leet': 'leet',
 	'letsgo': 'letsgoman',
