@@ -162,7 +162,8 @@ const specifics = {
 	'kult': 'hadetsåkult',
 	'kom': 'komhit',
 	'kön': 'könsorgan',
-	'kör': 'vemkör',
+	'kör': 'jagkör',
+	'köra': 'körabil',
 	'laugh': 'goofylaugh',
 	'leet': 'leet',
 	'letsgo': 'letsgoman',
@@ -239,6 +240,7 @@ const specifics = {
 	'trorinte': 'trorfaktisktintedet',
 	'uckers': 'uckers',
 	'vafan': 'vafantrordu',
+	'vem': 'vemkör',
 	'what': 'whatisit',
 	'who': 'whosaidthat',
 	'wiggle': 'wiggle',
@@ -346,6 +348,9 @@ client.on('message', async msg => {
 			}
 			else if(finalClip == 'sheeet') {
 				finalClip += (Math.floor(Math.random() * 5) + 1).toString();
+			}
+			else if(finalClip == 'vemkör') {
+				finalClip += (Math.floor(Math.random() * 2) + 1).toString();
 			}
 			if (msg.member.voice.channel) {
 				const connection = await msg.member.voice.channel.join();
