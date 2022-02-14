@@ -21,6 +21,7 @@ const specifics = {
 	'44': '44',
 	'100': 'hundraprocent',
 	'1337': '1337',
+	'2000': '2000yearslater',
 	'aa': 'aaa',
 	'aaa': 'aadebra',
 	'abc': 'alphabet',
@@ -177,6 +178,7 @@ const specifics = {
 	'matt': 'lillemattson',
 	'matt2': 'lilleeeemattsoooon',
 	'me': 'thatsme',
+	'million': 'millionposes',
 	'mkay': 'mkay',
 	'mkt': 'väldigtmycketpengar',
 	'more': 'morework',
@@ -236,7 +238,6 @@ const specifics = {
 	'time': 'timemachine',
 	'tjena': 'mattsontjena',
 	'tjäna': 'tjaenna',
-	'tlöt': 'tlööött',
 	'trevlig': 'trevligbradag',
 	'trorinte': 'trorfaktisktintedet',
 	'uckers': 'uckers',
@@ -245,6 +246,7 @@ const specifics = {
 	'what': 'whatisit',
 	'who': 'whosaidthat',
 	'wiggle': 'wiggle',
+	'winning': 'winning',
 	'words': 'wordsmouth',
 	'wow': 'wow',
 	'yes': 'yes',
@@ -355,6 +357,9 @@ client.on('message', async msg => {
 			}
 			else if(finalClip == 'nej') {
 				finalClip += (Math.floor(Math.random() * 5) + 1).toString();
+			}
+			else if(finalClip == 'winning') {
+				finalClip += (Math.floor(Math.random() * 6) + 1).toString();
 			}
 			if (msg.member.voice.channel) {
 				const connection = await msg.member.voice.channel.join();
