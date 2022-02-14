@@ -187,6 +187,7 @@ const specifics = {
 	'name2' : 'thisnameoscar',
 	'nasty': 'nasty',
 	'ne': 'nee',
+	'nej': 'nej',
 	'nice': 'nice',
 	'nä': 'nää',
 	'nnä': 'nädededede',
@@ -351,6 +352,9 @@ client.on('message', async msg => {
 			}
 			else if(finalClip == 'vemkör') {
 				finalClip += (Math.floor(Math.random() * 2) + 1).toString();
+			}
+			else if(finalClip == 'nej') {
+				finalClip += (Math.floor(Math.random() * 5) + 1).toString();
 			}
 			if (msg.member.voice.channel) {
 				const connection = await msg.member.voice.channel.join();
