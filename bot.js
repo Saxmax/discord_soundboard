@@ -89,7 +89,8 @@ const specifics = {
 	'eh': 'ehhh',
 	'eshg': 'eshg',
 	'eshag': 'esh...ag',
-	'exempel': 'exempel',
+	'exempel': 'exempel1',
+	'exempel2': 'exempel2',
 	'fam': 'internationalfam',
 	'fantastic': 'fantastic',
 	'feature': 'itsafeature',
@@ -139,6 +140,7 @@ const specifics = {
 	'hoe': 'yourmomsahoe',
 	'hot': 'hotfood',
 	'hrrm': 'throat',
+	'hydrogen': 'hydrogen',
 	'här': 'härkanmanva',
 	'imorron': 'imrgonärdetfredag',
 	'isak': 'isakadams',
@@ -210,7 +212,6 @@ const specifics = {
 	'omg': 'ohmygod',
 	'ord': 'ingaord',
 	'åkej': 'åååkej',
-	'oscars': 'oscarsmamma',
 	'penis': 'mypenis',
 	'penis2': 'itsmypenis',
 	'phew': 'pheeeeeeew',
@@ -361,9 +362,6 @@ client.on('message', async msg => {
 			}
 			else if(finalClip == 'winning') {
 				finalClip += (Math.floor(Math.random() * 6) + 1).toString();
-			}
-			else if(finalClip == 'exempel') {
-				finalClip += (Math.floor(Math.random() * 2) + 1).toString();
 			}
 			if (msg.member.voice.channel) {
 				const connection = await msg.member.voice.channel.join();
