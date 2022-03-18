@@ -139,6 +139,7 @@ const specifics = {
 	'heter': 'heterjagelnour',
 	'hm': 'hm',
 	'hi': 'hidoggie',
+	'hii': 'hi',
 	'hihi': 'hihihi',
 	'hoe': 'yourmomsahoe',
 	'hot': 'hotfood',
