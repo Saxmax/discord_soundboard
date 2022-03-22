@@ -28,6 +28,7 @@ const specifics = {
 	'achtung': 'achtung',
 	'anyway': 'howsyoursexlife',
 	'arg': 'ärduarg',
+	'available': 'available',
 	'aznee': 'aznee',
 	'badum': 'badumtsss',
 	'bajl': 'bajl',
@@ -124,8 +125,9 @@ const specifics = {
 	'got': 'hagotemmm',
 	'gott': 'detkanskelåtergott',
 	'gotyour': 'gotyourmom',
-	'gracias': 'gracias',
 	'gott': 'gått',
+	'gracias': 'gracias',
+	'guess': 'iguess',
 	'haha': 'hahaha',
 	'haha2': 'ahaha',
 	'harfråga': 'harenfråga',
@@ -144,6 +146,7 @@ const specifics = {
 	'hoe': 'yourmomsahoe',
 	'hot': 'hotfood',
 	'hrrm': 'throat',
+	'hurt': 'hurt',
 	'hydrogen': 'hydrogen',
 	'här': 'härkanmanva',
 	'imorron': 'imrgonärdetfredag',
@@ -157,6 +160,7 @@ const specifics = {
 	'jelly2': 'jellybeansoscar',
 	'jerk': 'jerk',
 	'job': 'givemejob',
+	'jobs': 'jobsdone',
 	'jobbar': 'vadjobbardumed',
 	'katt': 'lillekatt',
 	'katt2': 'lilleeeeeekaaaaatt',
@@ -189,6 +193,7 @@ const specifics = {
 	'million': 'millionposes',
 	'mkay': 'mkay',
 	'mkt': 'väldigtmycketpengar',
+	'milord': 'milord',
 	'money': 'wheresthemoney',
 	'more': 'morework',
 	'mother': 'youandyourmom',
@@ -227,6 +232,7 @@ const specifics = {
 	'quick': 'quickmafs',
 	'rain': 'isgonrain',
 	'ready': 'readytowork',
+	'repressed': 'repressed',
 	'rim': 'goodnightrimjob',
 	'ringer': 'ringerdet',
 	'ris': 'osåliteris',
@@ -247,6 +253,7 @@ const specifics = {
 	'story': 'whatastorymark',
 	'sure': 'sure',
 	'sygytt': 'sygytt',
+	'thats': 'thatsit',
 	'then': 'andthen',
 	'time': 'timemachine',
 	'tjena': 'mattsontjena',
@@ -258,6 +265,7 @@ const specifics = {
 	'vadsen': 'vadgörvisen',
 	'vafan': 'vafantrordu',
 	'vem': 'vemkör',
+	'want': 'ifyouwant',
 	'what': 'whatisit',
 	'who': 'whosaidthat',
 	'wiggle': 'wiggle',
@@ -368,6 +376,9 @@ client.on('message', async msg => {
 			}
 			else if(finalClip == 'winning') {
 				finalClip += (Math.floor(Math.random() * 6) + 1).toString();
+			}
+			else if(finalClip == 'milord') {
+				finalClip += (Math.floor(Math.random() * 2) + 1).toString();
 			}
 			if (msg.member.voice.channel) {
 				const connection = await msg.member.voice.channel.join();
