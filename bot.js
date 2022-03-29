@@ -164,6 +164,8 @@ const specifics = {
 	'jobbar': 'vadjobbardumed',
 	'katt': 'lillekatt',
 	'katt2': 'lilleeeeeekaaaaatt',
+	'keep': 'keepmumname',
+	'keep2': 'keepmammaname',
 	'keft': 'hållsåkeft',
 	'keft2': 'hållsåkeftoscar',
 	'keft3': 'hållsåkeftgråskinka',
