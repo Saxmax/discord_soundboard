@@ -166,6 +166,7 @@ const specifics = {
 	'katt2': 'lilleeeeeekaaaaatt',
 	'keep': 'keepmumname',
 	'keep2': 'keepmammaname',
+	'keep3': 'keepmymumblajse',
 	'keft': 'hållsåkeft',
 	'keft2': 'hållsåkeftoscar',
 	'keft3': 'hållsåkeftgråskinka',
