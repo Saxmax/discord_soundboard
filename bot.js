@@ -127,6 +127,7 @@ const specifics = {
 	'gotyour': 'gotyourmom',
 	'gott': 'gått',
 	'gracias': 'gracias',
+	'gubbe': 'äckligagubbe',
 	'guess': 'iguess',
 	'haha': 'hahaha',
 	'haha2': 'ahaha',
