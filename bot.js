@@ -288,7 +288,8 @@ const specificSong = {
 	'banjo': 'duelingbanjos',
 	'love': 'christofferloveyou',
 	'jurassic': 'jurassic',
-	'titanic': 'titanic'
+	'titanic': 'titanic',
+	'kenta': 'justidagärjagstark'
 };
 const commands = {
 	'stop': 'Stops the current clip or song from playing.'
