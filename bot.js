@@ -225,7 +225,8 @@ const specifics = {
 	'ok': 'ok',
 	'okay': 'ok1',
 	'okej': 'mattsonokej',
-	'omg': 'ohmygod',
+	'omg': 'omg',
+	'omg2': 'ohmygod',
 	'ord': 'ingaord',
 	'åkej': 'åååkej',
 	'penis': 'mypenis',
@@ -360,6 +361,9 @@ client.on('message', async msg => {
 			}
 			else if(finalClip == 'ok') {
 				finalClip += (Math.floor(Math.random() * 3) + 1).toString();
+			}
+			else if(finalClip == 'omg') {
+				finalClip += (Math.floor(Math.random() * 2) + 1).toString();
 			}
 			else if(finalClip == 'mkay') {
 				finalClip += (Math.floor(Math.random() * 6) + 1).toString();
