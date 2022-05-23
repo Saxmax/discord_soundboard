@@ -25,7 +25,6 @@ const specifics = {
 	'aa': 'aaa',
 	'aaa': 'aadebra',
 	'abc': 'alphabet',
-	'achtung': 'achtung',
 	'anyway': 'howsyoursexlife',
 	'arg': 'ärduarg',
 	'available': 'available',
