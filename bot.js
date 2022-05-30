@@ -135,6 +135,7 @@ const specifics = {
 	'harm2': 'harmonicaFull',
 	'have': 'havesomecandy',
 	'hej': 'hejsanmammaåpappa',
+	'hellno': 'helltotheno',
 	'hello': 'hello',
 	'help': 'help',
 	'here': 'herewego',
