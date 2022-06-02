@@ -73,6 +73,7 @@ const specifics = {
 	'creative': 'creative',
 	'crickets' : 'crickets',
 	'cry': 'cry',
+	'damn': 'gotdamn',
 	'deaf': 'deaf1',
 	'deaf2': 'deaf2',
 	'deez': 'deez-nuts',
@@ -214,6 +215,8 @@ const specifics = {
 	'nnä': 'nädededede',
 	'no': 'no',
 	'noo': 'nonono',
+	'noob': 'noobnoob',
+	'thanks': 'noobnoob', // alternative command to above
 	'no!': 'isaidno',
 	'not': 'nooot',
 	'notgood': 'younotgood',
