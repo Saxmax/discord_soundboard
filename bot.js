@@ -173,6 +173,7 @@ const specifics = {
 	'keft': 'hållsåkeft',
 	'keft2': 'hållsåkeftoscar',
 	'keft3': 'hållsåkeftgråskinka',
+	'ken': 'ken',
 	'kgandy': 'kgandy',
 	'kill': 'killya',
 	'kiosk': 'kioscar',
@@ -393,6 +394,9 @@ client.on('message', async msg => {
 			}
 			else if(finalClip == 'milord') {
 				finalClip += (Math.floor(Math.random() * 2) + 1).toString();
+			}
+			else if(finalClip == 'ken') {
+				finalClip += (Math.floor(Math.random() * 3) + 1).toString();
 			}
 			if (msg.member.voice.channel) {
 				const connection = await msg.member.voice.channel.join();
