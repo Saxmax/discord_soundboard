@@ -264,6 +264,7 @@ const specifics = {
 	'story': 'whatastorymark',
 	'sure': 'sure',
 	'sygytt': 'sygytt',
+	'tack': 'tack',
 	'thats': 'thatsit',
 	'then': 'andthen',
 	'time': 'timemachine',
