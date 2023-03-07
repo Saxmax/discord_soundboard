@@ -41,6 +41,8 @@ const specifics = {
 	'boner': 'bonerblood',
 	'boo': 'booyousuck',
 	'borlänge': 'borlänge',
+	'bra': 'tyckerdetbra',
+	'bra2': 'tyckerocksåbra',
 	'brb': 'illbeback',
 	'brek': 'brekfucht',
 	'brek2': 'brekfust',
