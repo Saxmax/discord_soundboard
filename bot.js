@@ -2,7 +2,19 @@ console.log("Setting up Din Mamma...");
 
 const auth = require('./auth.json');
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const Voice = require('@discordjs/voice');
+// const client = new Discord.Client({ intents: [Discord.Intents.FLAGS.GUILDS] });
+const client = new Discord.Client({
+	intents: [
+		Discord.GatewayIntentBits.Guilds,
+		Discord.GatewayIntentBits.GuildMembers,
+		Discord.GatewayIntentBits.GuildMessages,
+		Discord.GatewayIntentBits.GuildPresences,
+		Discord.GatewayIntentBits.GuildVoiceStates,
+		Discord.GatewayIntentBits.MessageContent
+	]
+});
+const player = Voice.createAudioPlayer();
 const fs = require('fs');
 // Sound clips.
 // const soundDirLocal = '//192.168.13.21/www/html/ljud/';
@@ -337,7 +349,17 @@ client.on('ready', () => {
 	client.user.setActivity('your mom..', { type: 'WATCHING' });
 });
 
-client.on('message', async msg => {
+
+
+
+
+
+
+
+
+
+client.on('messageCreate', async msg => {
+	console.log("READ MESSAGE: " + msg.content);
 	var con = msg.content.toLowerCase();
 
 	// Sound clips.
@@ -351,7 +373,8 @@ client.on('message', async msg => {
 			for(i = 0; i < k.length; i++) {
 				_string += "!" + k[i] + "\n";
 			}
-			msg.reply(_string);
+			// msg.reply(_string);
+			msg.reply({ content: _string });
 		}
 
 		// Specific clip.
@@ -431,7 +454,8 @@ client.on('message', async msg => {
 			for(i = 0; i < k.length; i++) {
 				_string += "&" + k[i] + "\n";
 			}
-			msg.reply(_string);
+			// msg.reply(_string);
+			msg.reply({ content: _string });
 		}
 
 		// Specific song.
@@ -446,37 +470,49 @@ client.on('message', async msg => {
 			}
 		}
 	}
-	else if(con.substr(0, 1) === ".") {
-		var k = Object.keys(commands);
-		var kv = Object.values(commands);
-		var wantedCommand = con.substr(1, con.length - 1);
+	// else if(con.substr(0, 1) === ".") {
+	// 	var k = Object.keys(commands);
+	// 	var kv = Object.values(commands);
+	// 	var wantedCommand = con.substr(1, con.length - 1);
 
-		// List all available commands.
-		if(wantedCommand == "list") {
-			var _string = "\n";
-			for(i = 0; i < k.length; i++) {
-				_string += "." + k[i] + " -> " + kv[i] + "\n";
-			}
-			msg.reply(_string);
-		}
+	// 	// List all available commands.
+	// 	if(wantedCommand == "list") {
+	// 		var _string = "\n";
+	// 		for(i = 0; i < k.length; i++) {
+	// 			_string += "." + k[i] + " -> " + kv[i] + "\n";
+	// 		}
+	// 		msg.reply(_string);
+	// 	}
 
-		// Specific command.
-		if(commands.hasOwnProperty(wantedCommand)) {
-			var _com = commands[wantedCommand];
-			if(_com == 'stop') {
-				if(msg.member.voice.channel) {
-					const connection = await msg.member.voice.channel.join();
-					connection.dispatcher.pause();
-				}
-			}
-		}
-	}
+	// 	// Specific command.
+	// 	if(commands.hasOwnProperty(wantedCommand)) {
+	// 		var _com = commands[wantedCommand];
+	// 		if(_com == 'stop') {
+	// 			if(msg.member.voice.channel) {
+	// 				const connection = await msg.member.voice.channel.join();
+	// 				connection.dispatcher.pause();
+	// 			}
+	// 		}
+	// 	}
+	// }
 	// Randomize clip from ALL.
 	else if(con === 'r' || con === 'random' || con === 'rand' || con === '!r') {
 		if (msg.member.voice.channel) {
-			const connection = await msg.member.voice.channel.join();
+			let channel = msg.member.voice.channel;
 			let chosenFile = files[Math.floor(Math.random() * files.length)];
-			const dispatcher = connection.play(soundDirLocal + chosenFile);
+			const resource = Voice.createAudioResource(chosenFile);
+			const connection = Voice.joinVoiceChannel({
+				channelId: channel.id,
+				guildId: channel.guild.id,
+				adapterCreator: channel.guild.voiceAdapterCreator
+			});
+			connection.subscribe(player);
+			connection.on(Voice.VoiceConnectionStatus.Ready, () => {
+				console.log('The connection has entered the Ready state - ready to play audio!');
+				player.play(resource);
+			});
+			// const connection = await msg.member.voice.channel.join();
+			// const dispatcher = connection.play(soundDirLocal + chosenFile);
 		}
 	}
 });

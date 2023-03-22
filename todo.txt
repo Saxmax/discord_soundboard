@@ -1,0 +1,9 @@
+En separat fil för shortcuts
+Separat fil för sångshortcuts
+ladda ner en core/base build och jobba efter den
+inge slash commands bara message reading
+bygg upp audioresources för alla filer vid start
+kör fs npm paketet för att detecta ändringar i shortcuts libs, applicera direkt
+om det går; känn efter om innehållet i ljud+sång mapparna ändrats, isåfall ladda in och kör audioresources där med
+lägg in att printa alla shortcuts i bokstavsordning
+separera playback o allt till egna funktioner
