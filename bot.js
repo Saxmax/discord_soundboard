@@ -310,6 +310,7 @@ const specifics = {
 	'woap': 'woap',
 	'words': 'wordsmouth',
 	'wow': 'wow',
+	'yas': 'yaas',
 	'yeah': 'yeahh',
 	'yes': 'yes',
 	'yippee': 'yippee',
@@ -380,61 +381,58 @@ client.on('messageCreate', async msg => {
 		// Specific clip.
 		if(specifics.hasOwnProperty(wantedClip)) {
 			var finalClip = specifics[wantedClip];
-			if(finalClip == 'throat') {
-				finalClip += (msg.content.substr(1, 1) == "H") ? (Math.ceil(Math.random() * 2) + 7).toString() : weightedRandomThroat().toString();
-				//finalClip += weightedRandomThroat().toString();
-			}
-			else if(finalClip == 'chipchip') {
-				finalClip += (Math.floor(Math.random() * 3) + 1).toString();
-			}
-			else if(finalClip == 'och') {
-				finalClip += (Math.floor(Math.random() * 4) + 1).toString();
-			}
-			else if(finalClip == 'laugh') {
-				finalClip += (Math.floor(Math.random() * 3) + 1).toString();
-			}
-			else if(finalClip == 'cry') {
-				finalClip += (Math.floor(Math.random() * 4) + 1).toString();
-			}
-			else if(finalClip == 'china') {
-				finalClip += (Math.floor(Math.random() * 12) + 1).toString();
-			}
-			else if(finalClip == 'no') {
-				finalClip += (Math.floor(Math.random() * 8) + 1).toString();
-			}
-			else if(finalClip == 'ok') {
-				finalClip += (Math.floor(Math.random() * 3) + 1).toString();
-			}
-			else if(finalClip == 'omg') {
-				finalClip += (Math.floor(Math.random() * 2) + 1).toString();
-			}
-			else if(finalClip == 'mkay') {
-				finalClip += (Math.floor(Math.random() * 6) + 1).toString();
-			}
-			else if(finalClip == 'madafaka') {
-				finalClip += (Math.floor(Math.random() * 3) + 1).toString();
-			}
-			else if(finalClip == 'wow') {
-				finalClip += (Math.floor(Math.random() * 5) + 1).toString();
-			}
-			else if(finalClip == 'sheeet') {
-				finalClip += (Math.floor(Math.random() * 5) + 1).toString();
-			}
-			else if(finalClip == 'vemkör') {
-				finalClip += (Math.floor(Math.random() * 2) + 1).toString();
-			}
-			else if(finalClip == 'nej') {
-				finalClip += (Math.floor(Math.random() * 5) + 1).toString();
-			}
-			else if(finalClip == 'winning') {
-				finalClip += (Math.floor(Math.random() * 6) + 1).toString();
-			}
-			else if(finalClip == 'milord') {
-				finalClip += (Math.floor(Math.random() * 2) + 1).toString();
-			}
-			else if(finalClip == 'ken') {
-				finalClip += (Math.floor(Math.random() * 3) + 1).toString();
-			}
+			// if(finalClip == 'throat') {
+			// 	finalClip += (msg.content.substr(1, 1) == "H") ? (Math.ceil(Math.random() * 2) + 7).toString() : weightedRandomThroat().toString();
+			// 	//finalClip += weightedRandomThroat().toString();
+			// }
+			// else if(finalClip == 'chipchip') {
+			// 	finalClip += (Math.floor(Math.random() * 3) + 1).toString();
+			// }
+			// else if(finalClip == 'och') {
+			// 	finalClip += (Math.floor(Math.random() * 4) + 1).toString();
+			// }
+			// else if(finalClip == 'cry') {
+			// 	finalClip += (Math.floor(Math.random() * 4) + 1).toString();
+			// }
+			// else if(finalClip == 'china') {
+			// 	finalClip += (Math.floor(Math.random() * 12) + 1).toString();
+			// }
+			// else if(finalClip == 'no') {
+			// 	finalClip += (Math.floor(Math.random() * 8) + 1).toString();
+			// }
+			// else if(finalClip == 'ok') {
+			// 	finalClip += (Math.floor(Math.random() * 3) + 1).toString();
+			// }
+			// else if(finalClip == 'omg') {
+			// 	finalClip += (Math.floor(Math.random() * 2) + 1).toString();
+			// }
+			// else if(finalClip == 'mkay') {
+			// 	finalClip += (Math.floor(Math.random() * 6) + 1).toString();
+			// }
+			// else if(finalClip == 'madafaka') {
+			// 	finalClip += (Math.floor(Math.random() * 3) + 1).toString();
+			// }
+			// else if(finalClip == 'wow') {
+			// 	finalClip += (Math.floor(Math.random() * 5) + 1).toString();
+			// }
+			// else if(finalClip == 'sheeet') {
+			// 	finalClip += (Math.floor(Math.random() * 5) + 1).toString();
+			// }
+			// else if(finalClip == 'vemkör') {
+			// 	finalClip += (Math.floor(Math.random() * 2) + 1).toString();
+			// }
+			// else if(finalClip == 'nej') {
+			// 	finalClip += (Math.floor(Math.random() * 5) + 1).toString();
+			// }
+			// else if(finalClip == 'winning') {
+			// 	finalClip += (Math.floor(Math.random() * 6) + 1).toString();
+			// }
+			// else if(finalClip == 'milord') {
+			// 	finalClip += (Math.floor(Math.random() * 2) + 1).toString();
+			// }
+			// else if(finalClip == 'ken') {
+			// 	finalClip += (Math.floor(Math.random() * 3) + 1).toString();
+			// }
 			if (msg.member.voice.channel) {
 				const connection = await msg.member.voice.channel.join();
 				connection.play(soundDirLocal + finalClip + '.mp3');
