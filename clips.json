@@ -6,6 +6,7 @@
 	"100": "hundraprocent",
 	"1337": "1337",
 	"2000": "2000yearslater",
+	"a": "aaaa",
 	"aa": "aaa",
 	"aaa": "aadebra",
 	"abc": "alphabet",
@@ -15,7 +16,6 @@
 	"aznee": "aznee",
 	"badum": "badumtsss",
 	"bajl": "bajl",
-	"banjo" : "banjo",
 	"barnbacke": "barnbacke",
 	"betray": "betrayme",
 	"blais": "blais",
@@ -224,7 +224,6 @@
 	"omg": ["omg1", "omg2"],
 	"omg2": "ohmygod",
 	"ord": "ingaord",
-	"åkej": "åååkej",
 	"pang": "pangpang",
 	"penis": "mypenis",
 	"penis2": "itsmypenis",
@@ -286,6 +285,7 @@
 	"yes": "yes",
 	"yippee": "yippee",
 	"youpo": "youpornehhh",
+	"åkej": "åååkej",
 	"ägd": "dublevägd",
 	"ägd2": "ägd"
 }

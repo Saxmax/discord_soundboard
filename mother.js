@@ -3,12 +3,16 @@ const { token } = require('./auth.json');
 const Voice = require('@discordjs/voice');
 
 const fs = require('fs');
-const Clips = require('./clips.json');
-const Songs = require('./songs.json');
-const clipPath = 'ljud';
-const songPath = 'songs';
-const clipFiles = fs.readdirSync(clipPath);
-const songFiles = fs.readdirSync(songPath);
+const Paths = {
+	Clips: './clips.json',
+	Songs: './songs.json',
+	ClipFolder: 'ljud',
+	SongFolder: 'songs'
+};
+let Clips = require(Paths.Clips);
+let Songs = require(Paths.Songs);
+let clipFiles = fs.readdirSync(Paths.ClipFolder);
+let songFiles = fs.readdirSync(Paths.SongFolder);
 
 const client = new Client({
 	intents: [
@@ -25,6 +29,26 @@ client.once(Events.ClientReady, c => {
 	audioPlayer = Voice.createAudioPlayer();
 
 	console.log(`Logged in as ${c.user.tag}!`);
+
+	// Monitor files and folders for changes.
+	// fs.watchFile(Paths.ClipFolder, (a, b) => {
+	// 	console.log("Change detected in Clip folder.");
+	// 	delete require.cache[require.resolve(Paths.ClipFolder)];
+	// 	clipFiles = fs.readdirSync(Paths.ClipFolder);
+	// });
+	// fs.watchFile(Paths.SongFolder, (a, b) => {
+	// 	console.log("Change detected in Song folder.");
+	// });
+	fs.watchFile(Paths.Clips, (a, b) => {
+		console.log("Change detected in Clips file.");
+		delete require.cache[require.resolve(Paths.Clips)];
+		Clips = require(Paths.Clips);
+	});
+	fs.watchFile(Paths.Songs, (a, b) => {
+		console.log("Change detected in Songs file.");
+		delete require.cache[require.resolve(Paths.Songs)];
+		Songs = require(Paths.Songs);
+	});
 });
 
 // Listen for messages from users.
@@ -134,7 +158,7 @@ const getAudioResource = function(name, type) {
 };
 
 const getAudioPath = function(fileName, isSong) {
-	return __dirname + "\\" + (isSong ? songPath : clipPath) + "\\" + fileName + ".mp3";
+	return __dirname + "\\" + (isSong ? Paths.SongFolder : Paths.ClipFolder) + "\\" + fileName + ".mp3";
 };
 
 const playAudioResource = function(connection, resource) {
