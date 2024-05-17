@@ -7,3 +7,6 @@ kör fs npm paketet för att detecta ändringar i shortcuts libs, applicera dire
 om det går; känn efter om innehållet i ljud+sång mapparna ändrats, isåfall ladda in och kör audioresources där med
 lägg in att printa alla shortcuts i bokstavsordning
 separera playback o allt till egna funktioner
+
+disconnect from channel if shutting down
+log out from discord api if shutting down
