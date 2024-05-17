@@ -158,7 +158,7 @@ const getAudioResource = function(name, type) {
 };
 
 const getAudioPath = function(fileName, isSong) {
-	return __dirname + "\\" + (isSong ? Paths.SongFolder : Paths.ClipFolder) + "\\" + fileName + ".mp3";
+	return __dirname + "/" + (isSong ? Paths.SongFolder : Paths.ClipFolder) + "/" + fileName + ".mp3";
 };
 
 const playAudioResource = function(connection, resource) {
