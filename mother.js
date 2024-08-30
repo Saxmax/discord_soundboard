@@ -222,16 +222,16 @@ const showCommands = function (msg) {
 };
 
 const connectToChannel = function (channel) {
-  const channel = Voice.joinVoiceChannel({
+  const connection = Voice.joinVoiceChannel({
     channelId: channel.id,
     guildId: channel.guild.id,
     adapterCreator: channel.guild.voiceAdapterCreator,
     selfDeaf: false,
   });
-  if (!allConnections.includes(channel)) {
-    allConnections.push(channel);
+  if (!allConnections.includes(connection)) {
+    allConnections.push(connection);
   }
-  return channel;
+  return connection;
 };
 
 const getCommandType = function (msg) {
