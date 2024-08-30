@@ -127,6 +127,7 @@ const Prefix = {
 };
 const SudoCommands = {
   Exit: "exit",
+  Disconnect: "dc",
 };
 
 // Functions.
@@ -285,12 +286,19 @@ const verifySudo = function (author) {
 
 const getSudoCommand = function (msg) {
   const command = msg.slice(1);
-  switch (command) {
-    case SudoCommands.Exit:
-      return SudoCommands.Exit;
-    default:
-      return false;
+  values = Object.values(SudoCommands);
+  for (let v = 0; v < values.length; v++) {
+    if (values[v] == command) {
+      return command;
+    }
   }
+  return false;
+  // switch (command) {
+  //   case SudoCommands.Exit:
+  //     return SudoCommands.Exit;
+  //   default:
+  //     return false;
+  // }
 };
 
 const performSudo = function (command) {
@@ -298,14 +306,25 @@ const performSudo = function (command) {
     case SudoCommands.Exit:
       sudoExit();
       break;
+    case SudoCommands.Disconnect:
+      sudoDisconnect();
+      break;
   }
 };
 
 const sudoExit = function () {
+  disconnectVoiceChannels();
+  process.exit(0);
+};
+
+const sudoDisconnect = function () {
+  disconnectVoiceChannels();
+};
+
+const disconnectVoiceChannels = function () {
   if (allConnections.length) {
     for (let i = 0; i < allConnections.length; i++) {
       allConnections[i].destroy();
     }
   }
-  process.exit(0);
 };
