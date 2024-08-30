@@ -110,6 +110,7 @@ const MessageMaxCount = 2000;
 let audioPlayer;
 let allClips = new Map();
 let allSongs = new Map();
+let allConnections = [];
 const CommandType = {
   None: 0,
   Random: 1,
@@ -221,12 +222,16 @@ const showCommands = function (msg) {
 };
 
 const connectToChannel = function (channel) {
-  return Voice.joinVoiceChannel({
+  const channel = Voice.joinVoiceChannel({
     channelId: channel.id,
     guildId: channel.guild.id,
     adapterCreator: channel.guild.voiceAdapterCreator,
     selfDeaf: false,
   });
+  if (!allConnections.includes(channel)) {
+    allConnections.push(channel);
+  }
+  return channel;
 };
 
 const getCommandType = function (msg) {
@@ -291,6 +296,16 @@ const getSudoCommand = function (msg) {
 const performSudo = function (command) {
   switch (command) {
     case SudoCommands.Exit:
-      process.exit(0);
+      sudoExit();
+      break;
   }
+};
+
+const sudoExit = function () {
+  if (allConnections.length) {
+    for (let i = 0; i < allConnections.length; i++) {
+      allConnections[i].destroy();
+    }
+  }
+  process.exit(0);
 };
