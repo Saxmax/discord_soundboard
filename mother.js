@@ -293,12 +293,6 @@ const getSudoCommand = function (msg) {
     }
   }
   return false;
-  // switch (command) {
-  //   case SudoCommands.Exit:
-  //     return SudoCommands.Exit;
-  //   default:
-  //     return false;
-  // }
 };
 
 const performSudo = function (command) {
