@@ -45,6 +45,7 @@
   "cannot": "cannotbuy",
   "car": "carkurage",
   "cares": "whocares",
+  "carry": "carrybag",
   "check": "checkthestatistacs",
   "chewie": "chewbaccaroar",
   "chicken": "chicken",
@@ -214,7 +215,13 @@
   "letsgo": "letsgoman",
   "listening": "wasntlistening",
   "lips": "pingu1",
-  "love": ["iloveyou", "lovedinmamma", "loveskriv", "lovebrekfucht"],
+  "love": [
+    "iloveyou",
+    "lovedinmamma",
+    "loveskriv",
+    "lovebrekfucht",
+    "lovecarry"
+  ],
   "look": "lookatme",
   "luder": "luder",
   "lyrics": "lyrics",
