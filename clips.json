@@ -18,6 +18,7 @@
   "bajl": "bajl",
   "barnbacke": "barnbacke",
   "best": "bestfriend",
+  "best2": "bestblajse",
   "betray": "betrayme",
   "blais": "blais",
   "blais2": "blais2",
@@ -216,13 +217,8 @@
   "letsgo": "letsgoman",
   "listening": "wasntlistening",
   "lips": "pingu1",
-  "love": [
-    "iloveyou",
-    "lovedinmamma",
-    "loveskriv",
-    "lovebrekfucht",
-    "lovecarry"
-  ],
+  "love": ["lovedinmamma", "loveskriv", "lovebrekfucht", "lovecarry"],
+  "love2": "iloveyou",
   "look": "lookatme",
   "luder": "luder",
   "lyrics": "lyrics",
