@@ -203,13 +203,16 @@
     "keepmammaname",
     "keepmymumblajse",
     "keepkgandybrek",
-    "keepbrekbrek"
+    "keepbrekbrek",
+    "keepbrekmouth"
   ],
+  "keepbrek": ["keepkgandybrek", "keepbrekbrek", "keepbrekmouth"],
   "keep1": "keepmumname",
   "keep2": "keepmammaname",
   "keep3": "keepmymumblajse",
   "keep4": "keepkgandybrek",
   "keep5": "keepbrekbrek",
+  "keep6": "keepbrekmouth",
   "keft": "hållsåkeft",
   "keft2": "hållsåkeftoscar",
   "keft3": "hållsåkeftgråskinka",
