@@ -97,7 +97,7 @@ client.on(Events.MessageCreate, async (msg) => {
 
   // We can finally connect to the channel and play the audio.
   let channel = msg.member.voice.channel;
-  let connection = connectToChannel(channel);
+  let connection = await connectToChannel(channel);
   connection.subscribe(audioPlayer);
 
   playAudioResource(connection, resource);
@@ -222,7 +222,7 @@ const showCommands = function (msg) {
   }
 };
 
-const connectToChannel = function (channel) {
+const connectToChannel = async function (channel) {
   const connection = Voice.joinVoiceChannel({
     channelId: channel.id,
     guildId: channel.guild.id,
